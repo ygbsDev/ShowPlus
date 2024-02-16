@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!_8a_)8u*ib26ow%i^#l8pz(=z^9_&v_#ki@6kk+4*i@9k5sak'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 SECURE_SSL_REDIRECT = False
 
@@ -79,31 +79,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-AUTH_USER_MODEL = 'app.SignUp'
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db',
-        'USER': 'connuser',
-        'PASSWORD': 'tyvmffjtm0!@#',
-        'HOST':'ec2-43-203-20-234.ap-northeast-2.compute.amazonaws.com',
-        'PORT':'3306',
-        # ---------------------------------
-        # 이모티콘 저장
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'use_unicode': True,
-        },
-        # ---------------------------------
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+AUTH_USER_MODEL = 'app.SignUp'
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
 
 # Password validation
