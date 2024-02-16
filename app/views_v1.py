@@ -225,10 +225,9 @@ def phoneAuthCode(request):
         # phone = request.POST.get('phone')
         print("phone >>", phone)
 
-        # account_sid = "AC0439997522d85ebfe591edc2bffa5eea"
-        # auth_token = "bfc4da6f296250ea2ae1af464d005b68"
-        account_sid = "AC7d423c2c86a1752bb3de12fb744718ef"
-        auth_token = "c6e59d8b14788209ff97e66d744737c7"
+
+        account_sid = ""
+        auth_token = ""
         client = Client(account_sid, auth_token)
 
         authCode = str(random.randint(100000, 999999))
@@ -2616,21 +2615,7 @@ def comentONcomentList(request):
                     me_timeyear = math.floor(me_timeday / 365)
 
 
-                    
-                    # if me_time < 1 :
-                    #     previous = '방금전'
-                        
-                    # elif me_time < 60 :
-                    #     previous = str(me_time) + '분전'
 
-                    # elif me_timehour < 24 :
-                    #     previous = str(me_timehour) + '시간전'
-                    
-                    # elif me_timeday < 365 :
-                    #     previous = str(me_timeday) + '일전'
-                    
-                    # elif me_timeyear >= 1 : 
-                    #     previous = str(me_timeyear) + '년전'
                     if me_time < 1 :
                         # previous = '방금전'
                         previous = 'B'
